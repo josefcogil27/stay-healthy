@@ -1,7 +1,7 @@
 const port = process.env.PORT || 3000
 
-export default {
-    Sever: 'production',
+module.exports = {
+    Server: 'production',
     PORT: port,
     development: {
         client: "pg",

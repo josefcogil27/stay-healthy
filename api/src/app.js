@@ -8,6 +8,7 @@ import * as serverConfig from './knexfile'
 
 // Importar rutas
 import usersRoutes from './routes/users'
+import productsRoutes from './routes/products'
 
 // Inicializar objection
 let knex;
@@ -31,6 +32,10 @@ const rutas = [
     {
         ruta: 'users',
         nombre: usersRoutes
+    },
+    {
+        ruta: 'products',
+        nombre: productsRoutes
     }
 ]
 

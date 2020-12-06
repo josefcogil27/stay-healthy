@@ -1,0 +1,25 @@
+{
+  "name": "stay-healthy",
+  "version": "1.0.0",
+  "description": "StayHealthy Rest API",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon src/app.js --exec babel-node",
+    "start": "node dist/app.js",
+    "build": "babel src --out-dir dist",
+    "refresh": "knex seed:run"
+  },
+  "author": "Jose Gil",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.21.12",
+    "morgan": "^1.10.0",
+    "objection": "^2.2.3",
+    "pg": "^8.5.1"
+  }
+}

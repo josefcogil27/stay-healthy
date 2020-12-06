@@ -150,18 +150,7 @@ exports.seed = async knex => {
                 }),
             // fin
 
-            // Pedido por defecto
-            knex('pedidos')
-                .insert({
-                    id: 1,
-                    id_tipo_pago: 2,
-                    id_cliente: 1,
-                    referencia: 2541,
-                    total: 999999.99,
-                    fecha: new Date()
-                }),
-            // fin
-
+            
 
             // Productos por defecto
             knex('productos')
@@ -191,6 +180,18 @@ exports.seed = async knex => {
                     id_empresa: 1
                 }
             ]),
+            // fin
+            
+            // Pedido por defecto
+            knex('pedidos')
+                .insert({
+                    id: 1,
+                    id_tipo_pago: 2,
+                    id_cliente: 1,
+                    referencia: '2541',
+                    total: 999999.99,
+                    fecha: new Date()
+                }),
             // fin
 
             // Relacion producto-pedido por defecto (mucho a mucho)

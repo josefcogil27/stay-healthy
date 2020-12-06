@@ -12,10 +12,10 @@ export default {
             database: "stay_healthy"
         },
         migrations: {
-            directory: "./migration"
+            directory: "./migrations"
         },
         seeds: {
-            directory: "./seed"
+            directory: "./seeds"
         }
     },
     production: {
@@ -27,10 +27,10 @@ export default {
             database: ""
         },
         migrations: {
-            directory: "./migration"
+            directory: "./migrations"
         },
         seeds: {
-            directory: "./seed"
+            directory: "./seeds"
         }
     }
 };

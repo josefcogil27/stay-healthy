@@ -4,10 +4,7 @@
   "description": "StayHealthy Rest API",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon src/app.js --exec babel-node",
-    "start": "node dist/app.js",
-    "build": "babel src --out-dir dist",
-    "refresh": "knex seed:run"
+    "refresh": "knex migrate:rollback && knex migrate:latest && knex seed:run"
   },
   "author": "Jose Gil",
   "license": "ISC",
@@ -21,11 +18,5 @@
     "morgan": "^1.10.0",
     "objection": "^2.2.3",
     "pg": "^8.5.1"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.12.8",
-    "@babel/core": "^7.12.9",
-    "@babel/node": "^7.12.6",
-    "@babel/preset-env": "^7.12.7"
   }
 }

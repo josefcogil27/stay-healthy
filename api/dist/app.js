@@ -14,6 +14,10 @@ var serverConfig = _interopRequireWildcard(require("./knexfile"));
 
 var _users = _interopRequireDefault(require("./routes/users"));
 
+var _products = _interopRequireDefault(require("./routes/products"));
+
+var _orders = _interopRequireDefault(require("./routes/orders"));
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -40,6 +44,12 @@ var app = (0, _express.default)().use((0, _morgan.default)('dev')).use((0, _cors
 var rutas = [{
   ruta: 'users',
   nombre: _users.default
+}, {
+  ruta: 'products',
+  nombre: _products.default
+}, {
+  ruta: 'orders',
+  nombre: _orders.default
 }]; // Definir rutas
 
 var definirRutas = rutas => {

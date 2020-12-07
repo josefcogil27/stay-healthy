@@ -1,12 +1,8 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
 var port = process.env.PORT || 3000;
-var _default = {
-  Sever: 'production',
+module.exports = {
+  Server: 'production',
   PORT: port,
   development: {
     client: "pg",
@@ -39,4 +35,3 @@ var _default = {
     }
   }
 };
-exports.default = _default;

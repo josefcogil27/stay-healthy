@@ -2,10 +2,10 @@
 
 import { Model } from 'objection'
 
-class Products extends Model {
+class Orders extends Model {
     static get tableName() {
-        return "productos";
+        return "pedidos";
     }
 }
 
-export default Products;
+export default Orders;
